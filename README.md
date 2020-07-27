@@ -1,4 +1,4 @@
-# **Helene UI - Minimal Conversational User Interfaces**
+# **Helene UI - Minimal Conversational User Interfaces** [![Netlify Status](https://api.netlify.com/api/v1/badges/095cf32d-4d90-4488-9ace-9b738e9e9643/deploy-status)](https://app.netlify.com/sites/helene-ui/deploys)
 
 <img src="img/icon/helene.png" alt="Helene icon" />
 
