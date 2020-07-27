@@ -32,7 +32,7 @@ Each conversational UI, example ``Chat window`` has their specific files which c
 
 #### How to use the conversational User Interfaces
 
-To use any conversational UI of your choice, just download the zip file, say ``chat-window.zip``, extract the files, and edit as desired. Then you may need to embbed the UI, say ``Chat window`` in your existing project or host the files entirely as a new project as in ``Conversational portfolio`` which does not support being embedded into an existing project.
+To use any conversational UI of your choice, just download the zip file, say ``chat-window.rar``, extract the files, and edit as desired. Then you may need to embbed the UI, say ``Chat window`` in your existing project or host the files entirely as a new project as in ``Conversational portfolio`` which does not support being embedded into an existing project.
 
 #### Contributors
 
