@@ -24,7 +24,7 @@
 Each conversational UI, example ``Chat window`` has their specific files which comprise of at least:
 
 1. An index file in ``html`` extension,
-2. Specific stylesheets in ``css`` foldeer,
+2. Specific stylesheets in ``css`` folder,
 3. Themes file to choose from in ``css`` folder,
 4. Specific fonts in ``fonts`` folder,
 5. Scripts in ``js`` folder,
@@ -36,8 +36,11 @@ To use any conversational UI of your choice, just download the zip file, say ``c
 
 #### Contributors
 
- 1. **Emmanuel Uchenna** (https://github.com/eunit99)
+ 1. [**Emmanuel Uchenna**](https://github.com/eunit99)
  2. **+**
 
+#### How to contribute
+
+To contribute to the project, kindly read our [guide on how to contribute](https://github.com/Eunit99/Helene-UI/blob/master/CONTRIBUTING.md)
 #### License
-Helene UI is licenced under the MIT License. (https://github.com/Eunit99/Helene-UI/blob/master/LICENSE)
+Helene UI is licenced under the [MIT License](https://github.com/Eunit99/Helene-UI/blob/master/LICENSE).
