@@ -1,0 +1,808 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>EDUBOTS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+	<!-- Primary Meta Tags -->
+	<title>EDUBOTS - Best Practices of Pedagogical Chatbots in Higher Education</title>
+	<meta name="title" content="EDUBOTS - Best Practices of Pedagogical Chatbots in Higher Education">
+	<meta name="description" content="We aim to increase student retention by automating pedagogical feedback for educators and giving personalized follow ups to students.">
+	<meta name="keywords" content="bots,chatbots,education,higher education,best practise">
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://edubots.differ.chat">
+	<meta property="og:title" content="EDUBOTS - Best Practices of Pedagogical Chatbots in Higher Education">
+	<meta property="og:description" content="We aim to increase student retention by automating pedagogical feedback for educators and giving personalized follow ups to students.">
+	<meta property="og:image" content="https://edubots.differ.chat/img/social_media_banner.jpg">
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://edubots.differ.chat">
+	<meta property="twitter:title" content="EDUBOTS - Best Practices of Pedagogical Chatbots in Higher Education">
+	<meta property="twitter:description" content="We aim to increase student retention by automating pedagogical feedback for educators and giving personalized follow ups to students.">
+	<meta property="twitter:image" content="https://edubots.differ.chat/img/social_media_banner.jpg">
+
+
+	<link rel="shortcut icon" type="image/ico" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?7698">
+	<link rel="stylesheet" type="text/css" href="style.css?8251">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Arvo&display=swap&subset=latin,latin-ext' rel='stylesheet'
+		  type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap&subset=latin,latin-ext'
+		  rel='stylesheet' type='text/css'>
+
+
+	<script src="js/cookieconsent.min.js"></script>
+
+	<script>
+		window.CookieConsent.init({
+			// More link URL on bar
+			modalMainTextMoreLink: null,
+			// How lond to wait until bar comes up
+			barTimeout: 1000,
+			// Look and feel
+			theme: {
+				barColor: '#3BBE98',
+				barTextColor: '#FFF',
+				barMainButtonColor: '#FFF',
+				barMainButtonTextColor: '#3BBE98',
+				modalMainButtonColor: '#3BBE98',
+				modalMainButtonTextColor: '#FFF',
+			},
+			language: {
+				// Current language
+				current: 'en',
+				locale: {
+					en: {
+						barMainText: 'This website uses cookies to ensure you get the best experience on our website.',
+						barLinkSetting: 'Cookie Settings',
+						barBtnAcceptAll: 'Accept all cookies',
+						modalMainTitle: 'Cookie settings',
+						modalMainText: 'Cookies are small piece of data sent from a website and stored on the user\'s computer by the user\'s web browser while the user is browsing. Your browser stores each message in a small file, called cookie. When you request another page from the server, your browser sends the cookie back to the server. Cookies were designed to be a reliable mechanism for websites to remember information or to record the user\'s browsing activity.',
+						modalBtnSave: 'Save current settings',
+						modalBtnAcceptAll: 'Accept all cookies and close',
+						modalAffectedSolutions: 'Affected solutions:',
+						learnMore: 'Learn More',
+						on: 'On',
+						off: 'Off',
+					}
+				}
+			},
+			// List all the categories you want to display
+			categories: {
+				// Unique name
+				// This probably will be the default category
+				/*necessary: {
+                    // The cookies here are necessary and category cant be turned off.
+                    // Wanted config value  will be ignored.
+                    needed: true,
+                    // The cookies in this category will be let trough.
+                    // This probably should be false if not necessary category
+                    wanted: true,
+                    // If the checkbox is on or off at first run.
+                    checked: true,
+                    // Language settings for categories
+                    language: {
+                        locale: {
+                            en: {
+                                name: 'Strictly Necessary Cookies',
+                                description: '',
+                            }
+                        }
+                    }
+                }*/
+				analytics: {
+					needed: false,
+					wanted: false,
+					checked: true,
+					language: {
+						locale: {
+							en: {
+								name: 'Analytics Cookies',
+								description: 'Basic Website tracking.',
+							}
+						}
+					}
+				}
+			},
+			// List actual services here
+			services: {
+				// Unique name
+				analytics: {
+					// Existing category Unique name
+					// This example shows how to block Google Analytics
+					category: 'various',
+					// Type of blocking to apply here.
+					// This depends on the type of script we are trying to block
+					// Can be: dynamic-script, script-tag, wrapped, localcookie
+					type: 'dynamic-script',
+					// Only needed if "type: dynamic-script"
+					// The filter will look for this keyword in inserted script tags
+					// and block if match found
+					search: 'analytics',
+					// List of known cookie names or Regular expressions matching
+					// cookie names placed by this service.
+					// These willbe removed from current domain and .domain.
+					cookies: [
+						{
+							// Known cookie name.
+							name: '_gid',
+							// Expected cookie domain.
+							domain: `.${window.location.hostname}`
+						},
+						{
+							// Regex matching cookie name.
+							name: /^_ga/,
+							domain: `.${window.location.hostname}`
+						}
+					],
+					language: {
+						locale: {
+							en: {
+								name: 'Google Analytics'
+							}
+						}
+					}
+				}
+			}
+		});
+	</script>
+
+
+	<!-- Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-65878811-4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-65878811-4');
+	</script>
+	<!-- Analytics END -->
+
+	<script>
+		// Set the date we're counting down to
+		var countDownDate = new Date("Jul 31,2020 12:00:00").getTime();
+
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+			// Get today's date and time
+			var now = new Date().getTime();
+
+			// Find the distance between now and the count down date
+			var distance = countDownDate - now;
+
+			// Time calculations for days, hours, minutes and seconds
+			var days = "" + Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = "" + Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = "" + Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = "" + Math.floor((distance % (1000 * 60)) / 1000);
+
+			document.getElementById("countDay").innerHTML = days;
+			document.getElementById("countHrs").innerHTML = hours;
+			document.getElementById("countMin").innerHTML = minutes;
+			document.getElementById("countSec").innerHTML = seconds;
+		}, 1000);
+	</script>
+
+</head>
+
+<body>
+<!-- Main container -->
+<div class="page-container">
+
+	<!-- bloc-0 -->
+	<div class="bloc l-bloc b-divider" id="bloc-0">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="row">
+						<div class="col-12">
+							<nav class="navbar row navbar-expand-md navbar-light" role="navigation">
+								<a class="navbar-brand ltc-davys-grey" href="index.html"><img
+										src="img/bot_icon_edubots.svg" alt="logo" class="mr-2"/>EDUBOTS</a>
+								<button id="nav-toggle" type="button"
+										class="ui-navbar-toggler navbar-toggler border-0 p-0 mr-md-0 ml-auto"
+										data-toggle="collapse" data-target=".navbar-44332" aria-expanded="false"
+										aria-label="Toggle navigation">
+									<span class="navbar-toggler-icon"></span>
+								</button>
+								<div class="collapse navbar-collapse navbar-44332 offset-md-1 col-md-7 col-lg-8">
+									<!--<ul class="site-navigation nav navbar-nav ml-auto">
+                                        <li class="nav-item">
+                                            <a href="index.html" class="nav-link  ltc-dark-jungle-green"
+                                                target="_blank">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="index.html" class="nav-link  ltc-dark-jungle-green">Learn
+                                                more</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="index.html" class="nav-link  ltc-dark-jungle-green">Case
+                                                studies</a>
+                                        </li>
+                                    </ul>-->
+								</div>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-0 END -->
+
+	<!-- bloc-1 -->
+	<div class="bloc tc-davys-grey l-bloc none" id="bloc-1">
+		<div class="container bloc-xl">
+			<div class="row voffset-md">
+				<div class="col-md-5 order-md-1">
+					<img src="img/lazyload-ph.png" data-src="img/header_group.svg"
+						 class="img-fluid img-margin-bottom mx-auto d-block lazyload" alt="Header image"/>
+				</div>
+				<div class="align-self-center bloc-margin-bottom col-md-6 offset-md-0">
+					<h1 class="tc-dark-jungle-green h2-margin-top mg-md text-center mg-sm-xs text-lg-left btn-resize-mode text-sm-center float-sm-none">
+						Chatbots in Higher&nbsp;Education
+					</h1>
+					<p
+							class="text-lg-left p-style mg-md text-center btn-resize-mode text-md-left d-block text-sm-center">
+						In the EDUBOTS project we aim to increase student retention by automating pedagogical
+						feedback for educators and giving personalised follow ups to students.
+						<br><br>
+						We believe scalable, publicly available findings can improve the quality of higher education in Europe
+						<br>
+					</p><a href="index.html"
+						   class="btn btn-margin-top btn-medium-aquamarine btn-rd btn-sm float-sm-none">
+					Join the project
+					<br></a><a href="index.html"
+							   class="btn btn-rd btn-style btn-wire wire-btn-medium-aquamarine btn-sm float-md-none">Learn
+					more<br></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-1 END -->
+
+	<!-- bloc-2 -->
+	<div class="bloc l-bloc full-width-bloc" id="bloc-2">
+		<div class="container ">
+			<div class="row row-bloc-2-margin-top voffset-lg">
+				<div
+						class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 bloc-bloc-2-margin-top offset-0">
+					<h4
+							class="h3-style mx-auto d-block text-lg-center tc-medium-aquamarine mg-md btn-resize-mode text-center">
+						<strong>Our main goals</strong>
+					</h4>
+					<h2
+							class="mx-auto d-block text-lg-center tc-dark-jungle-green h2-style text-center btn-resize-mode">
+						We have big dreams
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-2 END -->
+
+	<!-- bloc-3 -->
+	<div class="bloc l-bloc" id="bloc-3">
+		<div class="container">
+			<div class="row pd-0-11">
+				<div class="col-md-6">
+					<div class="dreams dreamsFirst">
+						<div class="d-block lazyload pt-30">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dreamsImg d-block text-center">
+										<img src="img/main_goals_woman1_icon.svg" class="rounded mx-auto d-block"
+											 data-src="img/main_goals_woman1_icon.svg" alt="Increased retention"/>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="dreamsText float-right">
+											<span class="float-left">
+												<h5 class="dreamsContent dreamsTitle">Increased retention</h5>
+												<p class="dreamsContent dreamsTextExplained">We expect to be able to
+													document
+													lower
+													dropout rates through increased student
+													engagement</p>
+											</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="dreams dreamsSecond">
+						<div class="d-block lazyload pt-30">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dreamsImg d-block text-center">
+										<img src="img/main_goals_woman2_icon.svg" class="rounded mx-auto d-block"
+											 data-src="img/main_goals_woman2_icon.svg" alt="Improved feedback"/>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="dreamsText float-right">
+											<span class="float-left">
+												<h5 class="dreamsContent dreamsTitle">Improved feedback</h5>
+												<p class="dreamsContent dreamsTextExplained">We focus on increasing the
+													frequency
+													and accuracy of feedback between educator and student</p>
+											</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-3 END -->
+
+	<!-- bloc-4 -->
+	<div class="bloc l-bloc" id="bloc-4">
+		<div class="container bloc-sm">
+			<div class="row pd-0-11">
+				<div class="col-md-6">
+					<div class="dreams dreamsThird">
+						<div class="d-block lazyload pt-30">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dreamsImg d-block text-center">
+										<img src="img/main_goals_rocket_icon.svg" class="rounded mx-auto d-block"
+											 data-src="img/main_goals_rocket_icon.svg"
+											 alt="Increased student engagement"/>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="dreamsText float-right">
+											<span class="float-left">
+												<h5 class="dreamsContent dreamsTitle">Increased student engagement</h5>
+												<p class="dreamsContent dreamsTextExplained">
+													We want our work to
+													have proven increase in student engagement. We focus on engagement between
+													peers/educators
+													and chatbots</p>
+											</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="dreams dreamsFourth">
+						<div class="d-block lazyload pt-30">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="dreamsImg d-block text-center">
+										<img src="img/main_goals_data_icon.svg" class="rounded mx-auto d-block"
+											 data-src="img/main_goals_data_icon.svg" alt="Knowledge sharing"/>
+									</div>
+								</div>
+								<div class="col-sm-7">
+									<div class="dreamsText float-right">
+											<span class="float-left">
+												<h5 class="dreamsContent dreamsTitle">Knowledge sharing</h5>
+												<p class="dreamsContent dreamsTextExplained">We make all findings
+													publicly
+													available. All documents are open source to create a sharing culture
+													in
+													academics</p>
+											</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-4 END -->
+
+	<!-- bloc-5 -->
+	<div class="bloc l-bloc none" id="bloc-5">
+		<div class="container bloc-sm">
+			<div class="row">
+				<div
+						class="col-sm-10 offset-sm-1 col-lg-6 offset-lg-3 bloc-bloc-5-margin-bottom offset-md-1 col-md-10">
+					<h4 class="mg-md text-lg-center h4-style tc-medium-aquamarine mx-auto d-block text-center">
+						Target audience
+					</h4>
+					<h2 class="mg-md h2-2-style tc-dark-jungle-green text-lg-center mx-auto d-block text-center">
+						We ❤️&nbsp;students and teachers
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-5 END -->
+
+	<!-- bloc-6 -->
+	<div class="bloc tc-davys-grey l-bloc none" id="bloc-6">
+		<div class="container ">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 col-lg-6 row-bloc-7-margin-top-eunit">
+					<img src="img/lazyload-ph.png" data-src="img/computer_picture.svg"
+						 class="eunit-img img-fluid img-8-margin-top mx-auto d-block lazyload"
+						 alt="Computer picture"/>
+				</div>
+				<div class="col-sm-12 col-md-6 col-lg-6 row-bloc-7-margin-top-eunit align-self-center">
+					<h2
+							class="mg-md h2-3-margin-top tc-dark-jungle-green mg-md-xs mx-auto d-block btn-resize-mode text-center text-lg-left text-md-left text-sm-left">
+						We help students
+					</h2>
+					<p
+							class="p-bloc-6-style btn-resize-mode mx-auto d-block mg-lg-xs text-center text-lg-left text-md-left text-sm-left">
+						The core of the project is to reduce dropout rates by increasing student engagement
+						using
+						pedagogical chatbots for higher education. <br><br>This means improved learning
+						outcomes and
+						more students that succeed in their studies - a huge socio-economic benefit for
+						Europe. <br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-6 END -->
+
+
+	<!-- bloc-7 -->
+	<div class="bloc tc-davys-grey l-bloc" id="bloc-7">
+		<div class="container bloc-md">
+			<div class="row row-bloc-7-margin-top">
+				<div class="col-md-6 order-md-1 bloc-bloc-7-margin-top">
+					<img src="img/lazyload-ph.png" data-src="img/computer_picture1.svg"
+						 class="eunit-img-2 img-fluid img-bloc-7-margin-top mx-auto d-block lazyload"
+						 alt="computer_picture"/>
+				</div>
+				<div class="col-md-6 align-self-center bloc-margin-top offset-0 col-12 col-sm-11">
+					<h2
+							class="mg-md tc-dark-jungle-green h2-bloc-7-style float-right text-center text-lg-left text-md-left text-sm-left">
+						We help teachers
+					</h2>
+					<p
+							class="p-bloc-7-style float-right mg-clear-xs text-center text-lg-left text-md-left mg-clear-md text-sm-left">
+						The Edubots project will contribute to breaking down borders and building up new
+						forms of
+						collaboration. <br><br>We go beyond the MOOCs, to stimulate collaboration among
+						academics in
+						open learning communities and making best practices publicly available&nbsp;<br>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- bloc-7 END -->
+
+	<!-- bloc-8 -->
+	<div class="bloc tc-davys-grey l-bloc" id="bloc-8">
+		<div class="container bloc-md">
+			<div class="numbers paddingNumbers text-center">
+				<div class="row">
+					<div class="col-12">
+						<div class="numbersHeading text-uppercase">
+							Our important numbers
+						</div>
+						<div class="numbersHeadingSecond">
+							Expected Outcome
+						</div>
+						<div class="row">
+							<div class="col-sm-9 offset-sm-2 numbersHeadingThird">
+								<div class="text-body" style="margin-bottom: 1em;">White Paper:<br>
+									Best Practices of Pedagogical Chatbots in Higher Education
+								</div>
+								<div style="font-size: small;">
+									Including:
+									Top chatbots in higher education<br>
+									Case study from each pilot every semester. All partners will do a short case study with the key findings.
+								</div>
+							</div>
+						</div>
+						<div class="numbersHeadingSecond">
+							Four Pilot Phases
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+						<div class="numbersCount">
+							10,000
+						</div>
+						<div class="numbersTitle">
+							Students
+						</div>
+						<div class="numbersTextExplaind">
+							10.000 students
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+						<div class="numbersCount">
+							5
+						</div>
+						<div class="numbersTitle">
+							Universities
+						</div>
+						<div class="numbersTextExplaind">
+							Chatbots pilots at various european universities
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+						<div class="numbersCount">
+							5000
+						</div>
+						<div class="numbersTitle">
+							Educators
+						</div>
+						<div class="numbersTextExplaind">
+							Inviting 5.000 educators into the open teaching community
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-lg-3 col-xl-3">
+						<div class="numbersCount">
+							<!-- <i class="gg-infinity"></i> -->
+							+
+						</div>
+						<div class="numbersTitle">
+							Shared knowledge
+						</div>
+						<div class="numbersTextExplaind">
+							We have created a sharing community that constantly shares new findings and best
+							practices
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-8 END -->
+
+<!-- bloc-10 -->
+<div class="bloc tc-davys-grey l-bloc" id="bloc-10">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-12 align-self-center">
+				<h4
+						class="mg-md tc-medium-aquamarine text-lg-center mx-auto d-block text-md-center text-sm-center h4-our-partners-style text-center">
+					Our partners
+				</h4>
+				<p class="mx-auto d-block text-lg-center p-bloc-10-style text-md-center text-sm-center text-center">
+					The project involves 6 partners representing 6 European countries
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-10 END -->
+
+<!-- bloc-11 -->
+<div class="bloc l-bloc" id="bloc-11">
+	<div class="container">
+		<div class="row text-center">
+			<div class="col-sm-4 col-lg-2">
+				<a href="https://www.differ.chat" target="_blank">
+					<img src="img/partner_differ.png" data-src="img/partner_differ.png" class="partnersImg img-fluid  lazyload"
+						 alt="differ.chat"/>
+				</a>
+			</div>
+			<div class="col-sm-4 col-lg-2">
+				<a href="https://www.hubert.ai" target="_blank">
+					<img src="img/partner_hubert-ai.png" data-src="img/partner_hubert-ai.png"
+						 class="partnersImg img-fluid  lazyload" alt="hubert.ai"/>
+				</a>
+			</div>
+			<div class="col-sm-4 col-lg-2">
+				<a href="https://www.leeds.ac.uk/" target="_blank">
+					<img src="img/uni-leeds.png" data-src="img/uni-leeds.png"
+						 class="partnersImg img-fluid  lazyload" alt="University of Leeds"/>
+				</a>
+			</div>
+			<div class="col-sm-4 col-lg-2">
+				<a href="https://www.foi.unizg.hr/en" target="_blank">
+					<img src="img/uni-zagreb.png" data-src="img/uni-zagreb.png"
+						 class="partnersImg img-fluid  lazyload" alt="University of Zagreb"/>
+				</a>
+			</div>
+			<div class="col-sm-4 col-lg-2">
+				<a href="https://www.rise.org.cy/en-gb/" target="_blank">
+					<img src="img/rise-up.png" data-src="img/rise-up.png" class="partnersImg img-fluid lazyload"
+						 alt="research centre on interactive media"/>
+				</a>
+			</div>
+			<div class="col-sm-4 col-lg-2">
+				<a href="https://www.ugr.es/en/" target="_blank">
+					<img src="img/uni-granada.png" data-src="img/uni-granada.png"
+						 class="partnersImg img-fluid  lazyload" alt="University of Granada"/>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-11 END -->
+
+<!-- bloc-12 -->
+<div class="bloc l-bloc none" id="bloc-12">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col">
+				<div class="CNcontainer text-center paddingCNcontainer">
+					<div class="row">
+						<div class="col-sm-12 col-lg-6 bordered">
+							<div class="CNcontainer countdownContainer">
+								<div class="CNcontainerHeader">
+									Countdown timer
+								</div>
+								<div class="CNcontainerSubTitle countdown">
+									Our next project iteration starts soon. Join us for more
+									<br/>
+									exciting research
+								</div>
+								<div class="countTimeContainer">
+									<div class="row">
+										<div class="col-sm-3 col-lg-3">
+											<div class="countTime"><span id="countDay"></span>
+												Days
+											</div>
+										</div>
+										<div class="col-sm-3 col-lg-3">
+											<div class="countTime"><span id="countHrs"></span>
+												Hours
+											</div>
+										</div>
+										<div class="col-sm-3 col-lg-3">
+											<div class="countTime"><span id="countMin"></span>
+												Minutes
+											</div>
+										</div>
+										<div class="col-sm-3 col-lg-3">
+											<div class="countTime"><span id="countSec"></span>
+												Seconds
+											</div>
+										</div>
+									</div>
+
+									<br><br>
+									<div class="small">(31.7.2020 12:00:00 CET)</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6 offset-sm-3">
+										<a href="#">
+											<div class="countTimeContainerSignUp text-uppercase">
+												sign up to the pilot
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-12 col-lg-6">
+							<div class="CNcontainer newsletterContainer">
+								<div class="CNcontainerHeader">
+									Our Newsletter
+								</div>
+								<div class="CNcontainerSubTitle newsletter">
+									Are you in education?
+									Are you interested in learning more about chatbots in
+									education?
+									Are you looking to streamline your education processes?
+								</div>
+								<div class="newsletterSignUpArea">
+									<div class="newsletterSignUpText text-left">
+										Look no further, this newsletter is for you. Sign up today
+									</div>
+									<div class="newsletterSignUpField">
+										<div class="row">
+											<div class="col-sm-8">
+												<input class="newsletterSignUpField input" type="text" name="email"
+													   placeholder="Your Email"/>
+											</div>
+											<div class="col-sm-4">
+												<input class="newsletterSignUpField submit text-uppercase"
+													   type="submit" name="submit" value="subscribe"/>
+											</div>
+										</div>
+									</div>
+									<div class="newsletterSignUpTextBottom text-left">
+										PS: We will never spam you. You will receive monthly updates which you can stop at any point
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-12 END -->
+
+<!-- bloc-14 -->
+<div class="bloc l-bloc" id="bloc-14">
+	<div class="container bloc-md">
+		<div class="row voffset row-bloc-2-margin-top">
+			<div
+					class="col-sm">
+				<h4 class="mg-md text-sm-left text-center tc-davys-grey h4-about-style">
+					Impress
+				</h4>
+				<p class="text-secondary small">
+					<br>
+					<strong>EDUBOTS - Best Practices of Pedagogical Chatbots in Higher Education</strong><br>
+					Reference Number: 612466-EPP-1-2019-1-NO-EPPKA2-KA<br>
+					<br><br>
+					<strong>Coordinator</strong><br>
+					EdTech Foundry AS<br>
+					Hoffsveien 6a<br>
+					0275 Oslo<br>
+					Norway<br>
+					Organizational number: 998 716 454<br><br>
+
+					Project Manager:<br>
+					Gregor Jarisch&nbsp;
+					(<script>
+					// This code is freeware provided these four comment lines remain intact
+					// A wizard to generate this code is at http://www.jottings.com/obfuscator/
+					{ coded = "kG5kHG@5CM5foKHQ0CGL.fHt"
+					key = "5ga41YChft0GVRlZObPJAWivDkFzuXBoKMjwpyes897TdxcmnrS2Q3UH6qIENL"
+					shift=coded.length
+					link=""
+					for (i=0; i<coded.length; i++) {
+					if (key.indexOf(coded.charAt(i))==-1) {
+					ltr = coded.charAt(i)
+					link += (ltr)
+					}
+					else {
+					ltr = (key.indexOf(coded.charAt(i))-shift+key.length) % key.length
+					link += (key.charAt(ltr))
+					}
+					}
+					document.write("<a href='mailto:"+link+"'>send email</a>")
+					}
+					//-->
+					</script><noscript>Sorry, you need Javascript on to email me.</noscript>)
+
+				</p>
+
+			</div>
+			<div class="col-sm">
+				<img src="img/lazyload-ph.png" data-src="img/logosbeneficaireserasmusright_en.png"
+					 class="img-fluid img-style mx-auto d-block lazyload" alt="logosbeneficaireserasmusright_en"/>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-14 END -->
+
+<!-- Main container END -->
+
+
+<!-- Preloader -->
+<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
+<!-- Preloader END -->
+
+<!-- ScrollToTop Button -->
+<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><span
+		class="fa fa-chevron-up"></span></a>
+<!-- ScrollToTop Button END-->
+
+
+<script src="./js/jquery-3.3.1.min.js?1837"></script>
+<script src="./js/bootstrap.bundle.min.js?2540"></script>
+<script src="./js/blocs.min.js?2926"></script>
+<script src="./js/lazysizes.min.js" defer></script>
+<!-- Additional JS END -->
+
+</body>
+</html>
