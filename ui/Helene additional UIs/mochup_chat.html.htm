@@ -1,0 +1,309 @@
+<section class="hero is-info is-fullheight is-bold is-centered">
+  <div class="hero-body">
+    <div class="container">
+          <div id="mockChat"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    
+    mockChat.init({
+      id: "mockChat",
+      data: ["Bonjour, souhaitez-vous me parler ?", "Oui, j'aimerais savoir ou se situe votre hôtel.", "Nous au 20 avenue Jean Michel dans le 6e arrondissement de Marseille.", "Merci !", "A votre service 🙂"],
+      loop: true,
+      delay: 1000, // Delay between messages
+      startDelay: 1200, // Delay before starting the animation
+      restartDelay: 3000, // Delay before restarting the animation if loop is set to true
+      loop: true, // Loop the animation
+    });
+    
+  })
+</script>
+
+
+
+$color1: #283747;
+$color2: #1446A0;
+$color3: #58D68D;
+$color4: #F8C7CC;
+$color5: #FCF7FF;
+
+
+.mockchat,
+.mockchat *,
+.mockchat *:after,
+.mockchat *:before {
+  box-sizing: border-box;
+}
+
+.mockchat {
+  position: relative;
+  color: $color1;
+  max-width: 300px;
+  margin: 0 auto;
+  height: auto;
+  line-height: 1.25;
+  perspective: 900px;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  .device {
+    width: 100%;
+    margin: 0 auto;
+    background: $color4;
+    padding-top: 200%;
+    border-radius: 50px;
+    box-shadow: 0 10px 40px rgba($color1, .4);
+    position: relative;
+    background: $color1;
+    transition: all .5s;
+    &:before {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 4%;
+      width: 40%;
+      background: $color1;
+      top: 10px; 
+      left: 30%;
+      border-radius: 0 0 10px 10px;
+      z-index: 3;
+      border-top: transparent;
+    }
+    &:after {
+      display: block;
+      content: "";
+      position: absolute;
+      height: 1%;
+      width: 15%;
+      background: darken($color1, 10%);
+      border-radius: 100px;
+      top: 18px; 
+      left: 42.5%;
+      z-index: 3;
+      border-top: transparent;
+    }
+    .screen {
+      position: absolute;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: $color5;
+      background-image: linear-gradient($color5, lighten($color1, 70%));
+      box-shadow: inset 0 0 40px rgba(white, .7),
+                  0 0 0 5px rgba(white, .15);
+      border-radius: 40px;
+      overflow: hidden;
+    }
+  }
+  .app {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1em;
+    overflow-y: scroll;
+    transition: all 0.3s;
+  }
+  .reply {
+    transform-origin: 100% 50%;
+    margin: 0.25em 0 0.25em 1.5em !important;
+    width: calc(100% - 3em);
+    background: white;
+    border-radius: 1.5em;
+    position: relative;
+    padding: 0.75em 1em;
+    box-shadow: 0 1px 10px rgba(black, 0.08);
+    opacity: 0;
+    transform: translateY(2em)scale(0.5);
+    animation: mockchat-reply-pop cubic-bezier(0, 0.81, 0.58, 1.2) 0.4s;
+    animation-fill-mode: forwards;
+    text-align: right;
+    transition: all 0.3s;
+    max-height: 0;
+  }
+  .reply:nth-child(2n - 1) {
+    transform-origin: 0 50%;
+    margin: 0.25em 1.5em 0.25em 1.5em !important;
+    width: calc(100% - 3em);
+    background: #1446A0;
+    color: white;
+    text-align: left;
+    &:after {
+      display: block;
+      content: "";
+      background: #58D68D;
+      position: absolute;
+      height: 0.75em;
+      width: 0.75em;
+      left: -1.5em;
+      top: 1.375em;
+      border-radius: 99999px;
+      font-size: 0.75em;
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      line-height: 1;
+      font-weight: bold;
+
+    }
+  }
+  .reply.dots {
+    transform-origin: 50% 50%;
+    margin: 0.25em 35% 0.25em 35% !important;
+    max-width: 30%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1;
+    &:after {
+      display: none;
+    }
+    span {
+      display: block;
+      height: 4px;
+      width: 4px;
+      background: currentColor;
+      display: inline-block;
+      border-radius: 99999px;
+      margin: 0.25em 0.15em;
+      opacity: 0;
+      animation: mockchat-dots 0.5s infinite alternate;
+      transform: translateY(0.25em);
+      &:nth-child(2) {
+        animation-delay: 0.1s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.2s;
+      }
+    }
+  }
+}
+
+@keyframes mockchat-dots {
+  to {
+    transform: translateY(-0.2em);
+    opacity: 1;
+  }
+}
+
+@keyframes mockchat-blink {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mockchat-reply-pop {
+  to {
+    transform: none;
+    font-size: 1rem;
+    opacity: 1;
+    max-height: 200px;
+  }
+}
+
+
+let mockChat = {
+	instances: Object,
+	init(args){
+
+		/*
+		 * DEFAULT PARAMETERS
+		 */
+		let params = {
+			id: args.id ? args.id : 'mockChat',
+			data: args.data ? args.data : ['Hmm... It looks like there is no data to display'],
+			delay: args.delay ? args.delay : 1300,
+			startDelay: args.startDelay ? args.startDelay : 1050,
+			restartDelay: args.restartDelay ? args.restartDelay : 2000,
+			loop : args.loop ? args.loop : true,
+		}
+
+		/*
+		 * CREATE MARKUP
+		 */
+
+		let mockChatContainer = document.querySelector('#'+ params.id)
+			mockChatContainer.innerHTML = `
+				<div class="device">
+					<div class="screen">
+						<div class="app">
+						</div>
+					</div>
+				</div>
+			`
+		mockChatContainer.classList.add('mockchat')
+		/*
+		 * TEMPLATES
+		 */
+
+		let reply = function (content) {
+			let el = document.createElement('div')
+			let text = document.createTextNode(content)
+			el.classList.add('reply')
+			el.appendChild(text)
+			return el
+		}
+
+		let replyDots = function () {
+			const dot1 = document.createElement('span')
+			const dot2 = document.createElement('span')
+			const dot3 = document.createElement('span')
+			let el = document.createElement('div')
+			el.appendChild(dot1)
+			el.appendChild(dot2)
+			el.appendChild(dot3)
+			el.classList.add('dots', 'reply')
+			return el
+		}
+
+		/*
+		 *	MOCKUP
+		 */
+
+		const chatScreen = mockChatContainer.querySelector('.app');
+		function draw(data) {
+			chatScreen.innerHTML = ''
+			chatScreen.appendChild(replyDots());
+			setTimeout( function() {
+				chatScreen.innerHTML = ''
+			}, params.startDelay)
+			for( i=0 ; i < data.length ; i++) {
+				let key = i;
+				setTimeout(function() {
+					chatScreen.appendChild(reply(data[key]));
+				}, params.startDelay + i * params.delay)
+			}
+		}
+
+		if(params.loop) {
+			draw(params.data);
+
+			this.instances[params.id] = setInterval( function() {
+				draw(params.data)
+			}, params.restartDelay + params.delay * params.data.length + 200)
+			
+
+		} else { 
+			draw(params.data);
+		}
+
+	},
+  
+	stop(id) {
+		clearInterval(this.instances[id])
+	},
+
+}

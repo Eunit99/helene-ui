@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Helene UI - Minimal Conversational UI</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="title" content="Helene UI - Minimal Conversational UI">
+        <meta name="author" content="@Eunit">
+        <meta name="description" content="Helene UI is a minimal conversational
+            user interfaces, responsive, easily integratable, and
+            customizable.">
+        <meta name="apple-touch-fullscreen" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@Helene_UI">
+        <meta name="twitter:creator" content="@eunit99">
+        <meta name="twitter:title" content="Helene UI - Minimal Conversational
+            UI">
+        <meta name="twitter:description" content="Helene UI is a minimal
+            conversational user interfaces, responsive, easily integratable, and
+            customizable.">
+        <meta name="twitter:image" content="../../img/icon/helene.png">
+        <link rel="icon" href="../../img/icon/helene.png" class="js-favicon">
+        <meta name="apple-mobile-web-app-status-bar-style" content="#00c497">
+        <meta name="theme-color" content="#00c497">
+        <link rel="mask-icon" href="../../img/icon/helene.png" color="#00c497">
+        <!-- Open Graph data -->
+        <meta property="og:title" content="Helene UI - Minimal Conversational
+            UI">
+        <meta property="og:url" content="https://helene.github.io">
+        <meta property="og:description" content="Helene UI is a minimal
+            conversational user interfaces, responsive, easily integratable, and
+            customizable.">
+        <meta property="og:site_name" content="Helene UI - Minimal
+            Conversational UI">
+        <meta property="og:image" content="../../img/icon/helene.png">
+        <meta name="og:locale" content="en_UK">
+        <meta name="fb:admins" content="">
+        <meta name="og:type" content="website">
+
+        <!-- Site Verifications -->
+        <link rel="shortcut icon" href="../../img/icon/helene.png" type="image/x-icon">
+        <link rel="icon" href="../../img/icon/helene.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../../img/icon/helene.png">
+
+        <!-- Custom fonts for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900"
+            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+        <!--  Stylesheets -->
+        <link rel="stylesheet" type="text/css" media="all" href="css/reset.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+        <link rel="stylesheet" href="css/html5reset.css">
+
+        <!-- Custom styling  -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/themes.css" />
+        <link rel="stylesheet" href="css/responsive.css">
+
+
+        <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+     <![endif]-->
+    </head>
+
+    <body>
+        <!-- Overlay page -->
+        <div class="section group">
+            <div class="col span_1_of_3">
+            </div>
+            <div class="col span_1_of_3 mt-80">
+                <div class="row text-center justify-content-center">
+                    <div class="chat-right">
+                        <div class="card h-100">
+                            <div class="card-body justify-content-center
+                                align-items-center">
+                                <h4 class="card-title text-primary"><i class="lnr lnr-frame-expand mr-15"></i>
+                                    Overlay
+                                </h4>
+                                <p class="card-text">With an overlay, you no
+                                    longer need to leave the page to do the
+                                    chat, simply and swiftly chat on the same
+                                    page!
+                                </p>
+                                <!-- Trigger Overlay function -->
+                                <a onclick="openOverlay()" href="#" class="btn
+                                    mt-auto">Chat in overlay</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col span_1_of_3">
+            </div>
+        </div>
+
+        <!-- Main Overlay window -->
+        <section id="" class="container">
+            <div class="section group">
+                <div class="overlay-content" id="overlay">
+                    <div class="col span_1_of_3">
+                    </div>
+                    <div class="col span_1_of_3 align-items-center
+                        justify-content-center">
+                        <div class="chat-right">
+                            <!--Close Overlay content -->
+                            <button href="#" title="Close the overlay" onclick="closeOverlay()"
+                                class="chatbox__title__close close po mt-0"><span>
+                                    <svg viewbox="0 0 12 12" width="10px" height="10px">
+                                        <line stroke="#FFFFFF" x1="11.75" y1="0.25" x2="0.25" y2="11.75"></line>
+                                        <line stroke="#FFFFFF" x1="11.75" y1="11.75" x2="0.25" y2="0.25"></line>
+                                    </svg>
+                                </span>
+                            </button>
+
+                            <!-- Chat contents in the container goes here -->
+                            <div class="chatbox__body chatMain active" id="chat">
+                                <div class="messaging">
+                                    <div class="mesgs">
+                                        <div class="msg_history" id="chat-container">
+                                            <div class="incoming_msg_img">
+                                                <img class="chat_img" src="../../img/icon/helene.png" alt="Helene" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--   Scripts  -->
+        <noscript>
+            <div class="noJS noJSText">
+                <i class="fa fa-exclamation-triangle fa-3x"></i>
+                E.D.D.I can't run without JavaScript. Click <a href="https://enable-javascript.com/"
+                    title="Learn how to enable JavaScript on your browser" target="_blank"
+                    rel="noreferrer noopener">here</a> to learn
+                more.
+            </div>
+        </noscript>
+        <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+        <script type="text/javascript" src="js/conversations.js"></script>
+        <script type="text/javascript" src="js/settings.js"></script>
+        <script type="text/javascript" src="js/scripts.js"></script>
+        <script>
+            // Stylying for IE and unsupported browsers START
+
+            // * This is a tweak to make IE support `--default__theme`
+            // * After trying so many methods; polyfill, ponyfill, ie11CustomProperties inclusive
+            // * All those methods didn't work out; so I'm using now!
+            // * (c) Eunit 2019 - 2020
+
+            if (!document.body.msMatchesSelector === false) {
+                // for index.html
+                window.MSInputMethodContext && document.documentMode && document.write(
+                    '<link rel="stylesheet" href="css/ie-default-style.css" />');
+                // for ../index.html
+                window.MSInputMethodContext && document.documentMode && document.write(
+                    '<link rel="stylesheet" href="../css/ie-default-style.css" />');
+                // for ../../index.html
+                window.MSInputMethodContext && document.documentMode && document.write(
+                    '<link rel="stylesheet" href="../../css/ie-default-style.css" />');
+            }
+
+            // Stylying for IE and unsupported browsers END
+        </script>
+    </body>
+
+</html>
