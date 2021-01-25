@@ -1,0 +1,59 @@
+{
+    "icons": [{
+        "src": "img/icon/favicon-16.ico",
+        "sizes": "16x16",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-32.ico",
+        "sizes": "32x32",
+        "type": "image/x-icon"
+      },{
+        "src": "img/icon/favicon-64.ico",
+        "sizes": "64x64",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-72.ico",
+        "sizes": "72x72",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-92.ico",
+        "sizes": "92x92",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-96.ico",
+        "sizes": "96x96",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-120.ico",
+        "sizes": "120x120",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-144.ico",
+        "sizes": "144x144",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-192.ico",
+        "sizes": "192x192",
+        "type": "image/x-icon"
+      },
+      {
+        "src": "img/icon/favicon-512.ico",
+        "sizes": "512x512",
+        "type": "image/x-icon"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#00c497",
+    "background_color": "#ffffff",
+    "short_name": "Helene",
+    "name": "Helene UI",
+    "orientation": "portrait"
+  }
