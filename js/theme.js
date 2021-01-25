@@ -4,12 +4,82 @@
 /* =================== */
 /*  
     
-
     
 
 */
 // -----------------------------
 
+jQuery(document).ready(function () {
+
+    //  Some cool User Experiences, Maybe!
+    var service0 = $("#service-single0"),
+        service1 = $("#service-single1"),
+        service2 = $("#service-single2"),
+        sliderImg = $(".slider-img"),
+        uiButton = $("#showMoreUI"),
+        uiTwo = $("#ui-2"),
+        uiMoreBtn = $(".uiMoreBtn"),
+        uiHomeBtn = $(".uiHomeBtn"),
+        $serviceSingle0 = $("#service-single0"),
+        $serviceSingle1 = $("#service-single1"),
+        $serviceSingle2 = $("#service-single2");
+
+    //Hide the services description by default
+    $serviceSingle0.addClass("visibilityHidden");
+    $serviceSingle1.addClass("visibilityHidden");
+    $serviceSingle2.addClass("visibilityHidden");
+
+    service0.mouseover(function () {
+        service0.children().addClass("bounceIn")
+    });
+    service0.mouseleave(function () {
+        service0.children().removeClass("bounceIn")
+    });
+
+    service1.mouseover(function () {
+        service1.children().addClass("bounceIn")
+    });
+    service1.mouseleave(function () {
+        service1.children().removeClass("bounceIn")
+    });
+
+    service2.mouseover(function () {
+        service2.children().addClass("bounceIn")
+    });
+    service2.mouseleave(function () {
+        service2.children().removeClass("bounceIn")
+    });
+
+    sliderImg.mouseover(function () {
+        sliderImg.children().addClass("bounceIn")
+    });
+    sliderImg.mouseleave(function () {
+        sliderImg.children().removeClass("bounceIn")
+    });
+    setTimeout(function () {
+        uiButton.click(function () {
+            uiTwo.removeClass("displayNone");
+            uiMoreBtn.addClass("displayNone");
+            uiHomeBtn.removeClass("displayNone");
+        })
+    }, 2000) // Why this? I don't even know!
+
+    // Do some great magic for the UX on scroll
+
+    $(window).scroll(function () {
+        var $scrollPosition = $(window).scrollTop();
+
+        if ($scrollPosition >= 300) {
+            $serviceSingle0.removeClass("visibilityHidden").addClass("bounceIn");
+            $serviceSingle1.removeClass("visibilityHidden").addClass("bounceIn");
+            $serviceSingle2.removeClass("visibilityHidden").addClass("bounceIn");
+        } else {
+            $serviceSingle0.removeClass("bounceIn");
+            $serviceSingle1.removeClass("bounceIn");
+            $serviceSingle2.removeClass("bounceIn");
+        }
+    })
+});
 
 (function ($) {
     "use strict";
@@ -138,10 +208,10 @@
     screen_slider();
 
     /*---------------------
-    client carousel
+    featured carousel
     --------------------- */
-    function client_carousel() {
-        var owl = $(".client-carousel");
+    function featured_carousel() {
+        var owl = $(".featured-carousel");
         owl.owlCarousel({
             loop: true,
             margin: 60,
@@ -171,7 +241,7 @@
             }
         });
     }
-    client_carousel();
+    featured_carousel();
 
     /*---------------------
     testimonial slider
@@ -310,6 +380,5 @@
             } // End if
         });
     });
-
 
 }(jQuery));

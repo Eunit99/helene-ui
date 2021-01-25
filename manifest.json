@@ -8,7 +8,8 @@
         "src": "img/icon/favicon-32.ico",
         "sizes": "32x32",
         "type": "image/x-icon"
-      },{
+      },
+      {
         "src": "img/icon/favicon-64.ico",
         "sizes": "64x64",
         "type": "image/x-icon"

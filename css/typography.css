@@ -14,7 +14,7 @@ Table Of Contents
 */
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Neue', cursive;
 }
 
 h1,
@@ -24,7 +24,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Neue', cursive;
     font-weight: 700;
     color: #000;
     letter-spacing: 1.5px;
@@ -37,7 +37,7 @@ h4 a,
 h5 a,
 h6 a {
     font-weight: inherit;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Neue', cursive;
 }
 
 h1 {
@@ -75,8 +75,8 @@ h6 {
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 16px;
     font-weight: normal;
     letter-spacing: 0;
     line-height: 28px;
@@ -88,9 +88,8 @@ p img {
 }
 
 span {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Neue', cursive;
 }
-
 
 
 /* em and strong */
@@ -110,12 +109,11 @@ small {
 }
 
 
-
 /*  blockquotes */
 
 blockquote {
     border-left: 0 none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Comic Neue', cursive;
     margin: 10px 0;
     padding-left: 40px;
     position: relative;
@@ -159,7 +157,6 @@ blockquote cite a:visited {
 }
 
 
-
 /* abbreviations */
 
 abbr {
@@ -173,7 +170,6 @@ abbr {
 abbr:hover {
     cursor: help;
 }
-
 
 
 /* links */
@@ -193,7 +189,7 @@ a:visited {
 
 a:hover,
 a:active {
-    color: #5b1ffa;
+    color: #00c497;
     text-decoration: none;
     outline: 0;
 }
@@ -210,9 +206,8 @@ p a:visited {
 }
 
 a.active-page {
-    color: #e6ae48!important;
+    color: #e6ae48 !important;
 }
-
 
 
 /* list */
@@ -233,11 +228,22 @@ ol {
     list-style: decimal;
 }
 
-ol,
+.single-price ul {
+    margin: 44px !important;
+    padding: 6px !important;
+}
+
+ul,
 ul.square,
 ul.circle,
 ul.disc {
     margin-left: 0px;
+}
+
+ol.items li,
+ul.items li {
+    font-size: 16px;
+    line-height: 2.625rem;
 }
 
 ul.square {
@@ -248,7 +254,7 @@ ul.circle {
     list-style: circle outside;
 }
 
-ul.disc {
+p.disc {
     list-style: disc outside;
 }
 
@@ -271,10 +277,9 @@ li {
     margin-bottom: 0px;
 }
 
-ul.large li {}
-
-li p {}
-
+.items li {
+    margin-left: 14px;
+}
 
 
 /* definition list */
@@ -291,9 +296,6 @@ dt {
 dd {
     margin: 0 0 0 20px;
 }
-
-button {}
-
 
 
 /* 
@@ -320,13 +322,11 @@ div#preloader {
     background: #fff;
 }
 
-
 .spinner {
     width: 40px;
     height: 40px;
     margin: auto;
     background-color: #333;
-
     border-radius: 100%;
     -webkit-animation: sk-scaleout 1.0s infinite ease-in-out;
     animation: sk-scaleout 1.0s infinite ease-in-out;
@@ -336,6 +336,7 @@ div#preloader {
     0% {
         -webkit-transform: scale(0)
     }
+
     100% {
         -webkit-transform: scale(1.0);
         opacity: 0;
@@ -347,6 +348,7 @@ div#preloader {
         -webkit-transform: scale(0);
         transform: scale(0);
     }
+
     100% {
         -webkit-transform: scale(1.0);
         transform: scale(1.0);
@@ -682,7 +684,6 @@ div#preloader {
 }
 
 
-
 /*------------------------------
    Page section padding 
 -------------------------------*/
@@ -750,12 +751,15 @@ div#preloader {
 .ptb--150 {
     padding: 150px 0
 }
+
 .ptb--160 {
     padding: 160px 0
 }
+
 .ptb--170 {
     padding: 170px 0
 }
+
 .ptb--180 {
     padding: 180px 0
 }
@@ -833,18 +837,22 @@ div#preloader {
     margin: 150px 0;
 }
 
-.d-flex{
+.d-flex {
     display: flex;
 }
-.flex-center{
+
+.flex-center {
     align-items: center;
 }
-.h-100{
+
+.h-100 {
     height: 100%;
 }
-.meta-content{
+
+.meta-content {
     overflow: hidden;
 }
-.bg-gray{
+
+.bg-gray {
     background-color: #fcfcfc;
 }
