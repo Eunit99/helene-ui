@@ -1,487 +1,496 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Helene UI - Minimal Conversational UI</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="title" content="Helene UI - Minimal Conversational UI">
-    <meta name="author" content="@Eunit">
-    <meta name="description" content="Helene UI is a minimal conversational
+	<head>
+		<title>Helene UI - Minimal Conversational UI</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="title" content="Helene UI - Minimal Conversational UI">
+		<meta name="author" content="@Eunit">
+		<meta name="description" content="Helene UI is a minimal conversational
             user interfaces, responsive, easily integratable, and
             customizable.">
-    <meta name="keywords" content="Helene, UI, conversational user
+		<meta name="keywords" content="Helene, UI, conversational user
             interfaces, conversational bot, conversational form, responsive ui,
             intergratable ui, customizable ui, helene, helene ui, helene bot,
             eunit">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="msapplication-TileColor" content="#00c497">
-    <meta name="theme-color" content="#00c497">
-    <link rel="manifest" href="manifest.json">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-touch-fullscreen" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#00c497">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@helene_UI">
-    <meta name="twitter:creator" content="@eunit99">
-    <meta name="twitter:title" content="Helene UI - Minimal Conversational
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="msapplication-TileColor" content="#00c497">
+		<meta name="theme-color" content="#00c497">
+		<link rel="manifest" href="manifest.json">
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#00c497">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@helene_UI">
+		<meta name="twitter:creator" content="@eunit99">
+		<meta name="twitter:title" content="Helene UI - Minimal Conversational
             UI">
-    <meta name="twitter:description" content="Helene UI is a minimal
+		<meta name="twitter:description" content="Helene UI is a minimal
             conversational user interfaces, responsive, easily integratable, and
             customizable.">
-    <meta name="msapplication-TileImage" content="../img/icon/helene.png">
-    <meta name="twitter:image" content="../img/icon/helene.png">
-    <meta name="apple-mobile-web-app-title" content="Add to Home">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="../img/icon/favicon.ico">
-    <link rel="shortcut icon" sizes="16x16" href="../favicon-16.ico">
-    <link rel="shortcut icon" sizes="32x32" href="../favicon-32.ico">
-    <link rel="shortcut icon" sizes="64x64" href="../favicon-64.ico">
-    <link rel="shortcut icon" sizes="72x72" href="../favicon-72.ico">
-    <link rel="shortcut icon" sizes="92x92" href="../favicon-92.ico">
-    <link rel="shortcut icon" sizes="96x96" href="../favicon-96.ico">
-    <link rel="shortcut icon" sizes="120x120" href="../favicon-120.ico">
-    <link rel="shortcut icon" sizes="144x144" href="../favicon-144.ico">
-    <link rel="shortcut icon" sizes="192x192" href="../favicon-192.ico">
-    <link rel="shortcut icon" sizes="512x512" href="../favicon-512.ico">
-    <link rel="apple-touch-icon" sizes="16x16" href="../favicon-16.ico">
-    <link rel="apple-touch-icon" sizes="32x32" href="../favicon-32.ico">
-    <link rel="apple-touch-icon" sizes="64x64" href="../favicon-64.ico">
-    <link rel="apple-touch-icon" sizes="72x72" href="../favicon-72.ico">
-    <link rel="apple-touch-icon" sizes="92x92" href="../favicon-92.ico">
-    <link rel="apple-touch-icon" sizes="96x96" href="../favicon-96.ico">
-    <link rel="apple-touch-icon" sizes="120x120" href="../favicon-120.ico">
-    <link rel="apple-touch-icon" sizes="144x144" href="../favicon-144.ico">
-    <link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.ico">
-    <link rel="apple-touch-icon" sizes="512x512" href="../favicon-512.ico">
-    <link rel="apple-touch-icon-precomposed" href="img/icon/helene.png">
-    <link rel="apple-touch-icon" href="img/icon/helene.png">
-    <link rel="mask-icon" href="img/icon/helene.png" color="#00c497">
-    <!-- Open Graph data -->
-    <meta property="og:title" content="Helene UI - Minimal Conversational
+		<meta name="msapplication-TileImage" content="../img/icon/helene.png">
+		<meta name="twitter:image" content="../img/icon/helene.png">
+		<meta name="apple-mobile-web-app-title" content="Add to Home">
+		<!-- Favicon -->
+		<link rel="shortcut icon" type="image/x-icon" href="../img/icon/favicon.ico">
+		<link rel="shortcut icon" sizes="16x16" href="../favicon-16.ico">
+		<link rel="shortcut icon" sizes="32x32" href="../favicon-32.ico">
+		<link rel="shortcut icon" sizes="64x64" href="../favicon-64.ico">
+		<link rel="shortcut icon" sizes="72x72" href="../favicon-72.ico">
+		<link rel="shortcut icon" sizes="92x92" href="../favicon-92.ico">
+		<link rel="shortcut icon" sizes="96x96" href="../favicon-96.ico">
+		<link rel="shortcut icon" sizes="120x120" href="../favicon-120.ico">
+		<link rel="shortcut icon" sizes="144x144" href="../favicon-144.ico">
+		<link rel="shortcut icon" sizes="192x192" href="../favicon-192.ico">
+		<link rel="shortcut icon" sizes="512x512" href="../favicon-512.ico">
+		<link rel="apple-touch-icon" sizes="16x16" href="../favicon-16.ico">
+		<link rel="apple-touch-icon" sizes="32x32" href="../favicon-32.ico">
+		<link rel="apple-touch-icon" sizes="64x64" href="../favicon-64.ico">
+		<link rel="apple-touch-icon" sizes="72x72" href="../favicon-72.ico">
+		<link rel="apple-touch-icon" sizes="92x92" href="../favicon-92.ico">
+		<link rel="apple-touch-icon" sizes="96x96" href="../favicon-96.ico">
+		<link rel="apple-touch-icon" sizes="120x120" href="../favicon-120.ico">
+		<link rel="apple-touch-icon" sizes="144x144" href="../favicon-144.ico">
+		<link rel="apple-touch-icon" sizes="192x192" href="../favicon-192.ico">
+		<link rel="apple-touch-icon" sizes="512x512" href="../favicon-512.ico">
+		<link rel="apple-touch-icon-precomposed" href="img/icon/helene.png">
+		<link rel="apple-touch-icon" href="img/icon/helene.png">
+		<link rel="mask-icon" href="img/icon/helene.png" color="#00c497">
+		<!-- Open Graph data -->
+		<meta property="og:title" content="Helene UI - Minimal Conversational
             UI">
-    <meta property="og:url" content="https://helene-ui.xyz">
-    <meta property="og:description" content="Helene UI is a minimal
+		<meta property="og:url" content="https://helene-ui.xyz">
+		<meta property="og:description" content="Helene UI is a minimal
             conversational user interfaces, responsive, easily integratable, and
             customizable.">
-    <meta property="og:site_name" content="Helene UI - Minimal
+		<meta property="og:site_name" content="Helene UI - Minimal
             Conversational UI">
-    <meta property="og:image" content="../img/icon/helene.png">
-    <meta name="og:locale" content="en_UK">
-    <meta name="fb:admins" content="XXXXXXXXXXXX">
-    <meta name="og:type" content="website">
-    <meta property="article:publisher" content="https://www.facebook.com/helene-ui">
-    <meta property="og:image:secure_url" content="../img/icon/helene.png">
-    <meta property="og:image:width" content="512">
-    <meta property="og:image:height" content="512">
-    <!-- Site Verifications -->
-    <meta name="google-analytics" content="UA-173752063-1">
-    <meta name="google-site-verification" content="4ufMzIXnIMIrKwxao6xWu6h2E3D52Sc3NbJeOD0O4-w">
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/jquery-ui.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/owl.carousel.min.css">
-    <link rel="stylesheet" href="../css/slicknav.min.css">
-    <link rel="stylesheet" href="../css/magnificpopup.css">
-    <link rel="stylesheet" href="../css/typography.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/animate.min.css">
+		<meta property="og:image" content="../img/icon/helene.png">
+		<meta name="og:locale" content="en_UK">
+		<meta name="fb:admins" content="XXXXXXXXXXXX">
+		<meta name="og:type" content="website">
+		<meta property="article:publisher" content="https://www.facebook.com/helene-ui">
+		<meta property="og:image:secure_url" content="../img/icon/helene.png">
+		<meta property="og:image:width" content="512">
+		<meta property="og:image:height" content="512">
+		<!-- Site Verifications -->
+		<meta name="google-analytics" content="UA-173752063-1">
+		<meta name="google-site-verification" content="4ufMzIXnIMIrKwxao6xWu6h2E3D52Sc3NbJeOD0O4-w">
+		<!-- CSS -->
+		<link rel="stylesheet" href="../css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/jquery-ui.css">
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/owl.carousel.min.css">
+		<link rel="stylesheet" href="../css/slicknav.min.css">
+		<link rel="stylesheet" href="../css/magnificpopup.css">
+		<link rel="stylesheet" href="../css/typography.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/responsive.css">
+		<link rel="stylesheet" href="../css/animate.min.css">
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-MHRVG6J');
-    </script>
-    <!-- End Google Tag Manager -->
+		<!-- Google Tag Manager -->
+		<script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					'gtm.start': new Date().getTime(),
+					event: 'gtm.js'
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'dataLayer', 'GTM-MHRVG6J');
+		</script>
+		<!-- End Google Tag Manager -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173752063-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-173752063-1"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-        gtag('config', 'UA-173752063-1');
-    </script>
+			gtag('config', 'UA-173752063-1');
+		</script>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-</head>
+	</head>
 
-<body>
-    <!-- preloader area start -->
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
-    <!-- preloader area end -->
+	<body>
+		<!-- preloader area start -->
+		<div id="preloader">
+			<div class="spinner"></div>
+		</div>
+		<!-- preloader area end -->
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHRVG6J" height="0" width="0"
-                style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHRVG6J" height="0" width="0"
+				style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 
 
-    <!-- header area start -->
-    <header id="header">
-        <div class="header-area">
-            <div class="container">
-                <div class="row">
-                    <div class="menu-area">
-                        <div class="col-md-3 col-sm-12 col-xs-12">
-                            <div class="logo">
-                                <a href="../index.html">
-                                    <img src="../img/icon/logo.png" alt="Helene
+		<!-- header area start -->
+		<header id="header">
+			<div class="header-area">
+				<div class="container">
+					<div class="row">
+						<div class="menu-area">
+							<div class="col-md-3 col-sm-12 col-xs-12">
+								<div class="logo">
+									<a href="../index.html">
+										<img src="../img/icon/logo.png" alt="Helene
                                             UI - Minimal conversational User
                                             Interface">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-9 hidden-xs hidden-sm">
-                            <div class="main-menu">
-                                <nav class="nav-menu">
-                                    <ul>
-                                        <li class="active">
-                                            <a class="js-scroll" href="#home">Home</a>
-                                        </li>
-                                        <li>
-                                            <a class="js-scroll" href="#feature">Features</a>
-                                        </li>
-                                        <li>
-                                            <a class="js-scroll" href="#screenshot">Screenshot</a>
-                                        </li>
-                                        <li>
-                                            <a class="js-scroll" href="#ui">UIs</a>
-                                        </li>
-                                        <li>
-                                            <a class="js-scroll" href="#contributors">Contributors</a>
-                                        </li>
-                                        <li>
-                                            <a class="js-scroll" href="#browser">Browser
-                                                    Support</a>
-                                        </li>
-                                        <li>
-                                            <a class="js-scroll" href="#contact">Contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-xs-12 visible-sm
+									</a>
+								</div>
+							</div>
+							<div class="col-md-9 hidden-xs hidden-sm">
+								<div class="main-menu">
+									<nav class="nav-menu">
+										<ul>
+											<li class="active">
+												<a class="js-scroll" href="#home">Home</a>
+											</li>
+											<li>
+												<a class="js-scroll" href="#feature">Features</a>
+											</li>
+											<li>
+												<a class="js-scroll" href="#screenshot">Screenshot</a>
+											</li>
+											<li>
+												<a class="js-scroll" href="#ui">UIs</a>
+											</li>
+											<li>
+												<a class="js-scroll" href="#contributors">Contributors</a>
+											</li>
+											<li>
+												<a class="js-scroll" href="#browser">Browser
+													Support</a>
+											</li>
+											<li>
+												<a class="js-scroll" href="#contact">Contact</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+							<div class="col-sm-12 col-xs-12 visible-sm
                                 visible-xs">
-                            <div class="mobile_menu"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- header area end -->
-    <!-- slider area start -->
-    <section id="home" class="slider-area image-background parallax" data-speed="3" data-bg-image="../img/bg/slider-bg.jpg">
-        <div class="container">
-            <div class="col-md-6 col-sm-6 hidden-xs">
-                <div class="row">
-                    <div class="slider-img">
-                        <img src="../img/mobile/slider-left-img.png" alt="slider image">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="row">
-                    <div class="slider-inner text-right">
-                        <h2 class="bold">Helene UI</h2>
-                        <h5>Minimal Conversational User Interfaces</h5>
-                        <a id="viewUI" class="expand-started js-scroll" href="#ui-container">
-                            <i class="fa fa-arrow-down"></i> View UIs
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- slider area end -->
-    <!-- service area start -->
-    <div class="service-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="service-single" id="service-single0">
-                        <img src="../img/service/service-img1.png" alt="service
+								<div class="mobile_menu"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- header area end -->
+		<!-- slider area start -->
+		<section id="home" class="slider-area image-background parallax" data-speed="3"
+			data-bg-image="../img/bg/slider-bg.jpg">
+			<div class="container">
+				<div class="col-md-6 col-sm-6 hidden-xs">
+					<div class="row">
+						<div class="slider-img">
+							<img src="../img/mobile/slider-left-img.png" alt="slider image">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12">
+					<div class="row">
+						<div class="slider-inner text-right">
+							<h2 class="bold">Helene UI</h2>
+							<h5>Minimal Conversational User Interfaces</h5>
+							<a id="viewUI" class="expand-started js-scroll" href="#ui-container">
+								<i class="fa fa-arrow-down"></i> View UIs
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- slider area end -->
+		<!-- service area start -->
+		<div class="service-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="service-single" id="service-single0">
+							<img src="../img/service/service-img1.png" alt="service
                                 image">
-                        <h2>Responsive Design</h2>
-                        <p>Helene UIs are beautiful across all devices</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="service-single" id="service-single1">
-                        <img src="../img/service/service-img2.png" alt="service
+							<h2>Responsive Design</h2>
+							<p>Helene UIs are beautiful across all devices</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="service-single" id="service-single1">
+							<img src="../img/service/service-img2.png" alt="service
                                 image">
-                        <h2>Easy Integration</h2>
-                        <p>Easily integrate Helene UIs into your project</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="service-single" id="service-single2">
-                        <img src="../img/service/service-img3.png" alt="service
+							<h2>Easy Integration</h2>
+							<p>Easily integrate Helene UIs into your project</p>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="service-single" id="service-single2">
+							<img src="../img/service/service-img3.png" alt="service
                                 image">
-                        <h2>Customizable</h2>
-                        <p>Helene UIs can be customized to suit your design</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- service area end -->
+							<h2>Customizable</h2>
+							<p>Helene UIs can be customized to suit your design</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- service area end -->
 
 
-    <!-- ui area start -->
-    <section class="ui-area ptb--100" id="ui-container">
-        <div class="container">
-            <div class="section-title">
-                <h2>Conversational User Interfaces</h2>
-                <p>Select from our responsive conversational UIs</p>
-            </div>
-            <div class="row ui-container" id="ui-1">
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Conversational</span>
-                            <h5>portfolio</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="good">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="bad">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="conversational-portfolio/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/conversational-portfolio.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Chat</span>
-                            <h5>Window</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="good">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="good">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="chat-window/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/chat-window.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Embeddable</span>
-                            <h5>Chat UI</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="bad">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="good">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="embeddable-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/embeddable-ui.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Overlay</span>
-                            <h5>Chat UI</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="good">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="good">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="overlay-chat-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/overlay-chat-ui.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row ui-container displayNone" id="ui-2">
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Conversational</span>
-                            <h5>portfolio</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="good">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="bad">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="conversational-portfolio/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/conversational-portfolio.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Chat</span>
-                            <h5>Window</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="good">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="good">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="chat-window/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/chat-window.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Embeddable</span>
-                            <h5>Chat UI</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="bad">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="good">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="embeddable-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/embeddable-ui.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-6 col-lg-3">
-                    <div class="single-price">
-                        <div class="prc-head">
-                            <span>Overlay</span>
-                            <h5>Chat UI</h5>
-                        </div>
-                        <ul>
-                            <li class="good">Free</li>
-                            <li class="good">Fully responsive</li>
-                            <li class="good">Unique design</li>
-                            <li class="good">Integrate in existing project</li>
-                            <li class="good">Minimal design</li>
-                            <li class="good">Choose desired styles</li>
-                        </ul>
-                        <div class="action-button">
-                            <a href="overlay-chat-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check demo</a>
-                            <a href="Source-codes/overlay-chat-ui.rar" class="download">Download</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <a href="../index.html" id="goHome" class="uiHomeBtn displayNone">
-                    <!-- Click to go to "../index.html (home)" -->
-                    <div class="col-xs-12 float-left ui-button home">
-                        <i class="fa fa-arrow-left"> </i> Go Home
-                    </div>
-                </a>
+		<!-- ui area start -->
+		<section class="ui-area ptb--100" id="ui-container">
+			<div class="container">
+				<div class="section-title">
+					<h2>Conversational User Interfaces</h2>
+					<p>Select from our responsive conversational UIs</p>
+				</div>
+				<div class="row ui-container" id="ui-1">
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Conversational</span>
+								<h5>portfolio</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="good">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="bad">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="conversational-portfolio/index.html" target="_blank" rel="noreferrer noopener"
+									class="check-demo">Check demo</a>
+								<a href="Source-codes/conversational-portfolio.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Chat</span>
+								<h5>Window</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="good">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="good">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="chat-window/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check
+									demo</a>
+								<a href="Source-codes/chat-window.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Embeddable</span>
+								<h5>Chat UI</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="bad">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="good">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="embeddable-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check
+									demo</a>
+								<a href="Source-codes/embeddable-ui.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Overlay</span>
+								<h5>Chat UI</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="good">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="good">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="overlay-chat-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check
+									demo</a>
+								<a href="Source-codes/overlay-chat-ui.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ui-container displayNone" id="ui-2">
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Conversational</span>
+								<h5>portfolio</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="good">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="bad">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="conversational-portfolio/index.html" target="_blank" rel="noreferrer noopener"
+									class="check-demo">Check demo</a>
+								<a href="Source-codes/conversational-portfolio.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Chat</span>
+								<h5>Window</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="good">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="good">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="chat-window/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check
+									demo</a>
+								<a href="Source-codes/chat-window.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Embeddable</span>
+								<h5>Chat UI</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="bad">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="good">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="embeddable-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check
+									demo</a>
+								<a href="Source-codes/embeddable-ui.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-6 col-lg-3">
+						<div class="single-price">
+							<div class="prc-head">
+								<span>Overlay</span>
+								<h5>Chat UI</h5>
+							</div>
+							<ul>
+								<li class="good">Free</li>
+								<li class="good">Fully responsive</li>
+								<li class="good">Unique design</li>
+								<li class="good">Integrate in existing project</li>
+								<li class="good">Minimal design</li>
+								<li class="good">Choose desired styles</li>
+							</ul>
+							<div class="action-button">
+								<a href="overlay-chat-ui/index.html" target="_blank" rel="noreferrer noopener" class="check-demo">Check
+									demo</a>
+								<a href="Source-codes/overlay-chat-ui.rar" class="download">Download</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<a href="../index.html" id="goHome" class="uiHomeBtn displayNone">
+						<!-- Click to go to "../index.html (home)" -->
+						<div class="col-xs-12 float-left ui-button home">
+							<i class="fa fa-arrow-left"> </i> Go Home
+						</div>
+					</a>
 
-                <a id="showMoreUI" class="uiMoreBtn">
-                    <!-- Click to display the #ui-2 -->
-                    <div class="col-xs-12 float-right ui-button more">
-                        More <i class="fa fa-caret-down"> </i>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <!-- ui area end -->
-    <!-- contributors area start -->
-    <footer>
-        <div class="footer-area">
-            <div class="container">
-                <!-- ScrollToTop Button -->
-                <!-- <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"> -->
-                <!-- <span class="fa fa-chevron-up">Top</span> -->
-                <!-- </a> -->
-                <!-- ScrollToTop Button END-->
-                <p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-                    Helene UI. All rights reserved. Template by
-                    <a href="https://colorlib.com" target="_blank" rel="noreferrer noopener">Colorlib</a>. With ❤ by
-                    <a href="https://eunit99.github.io/" target="_blank" rel="noopener noreferrer">Eunit99</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
-            </div>
-        </div>
-    </footer>
-    <!-- footer area end -->
-    <!-- Scripts -->
-    <script src="../js/jquery-3.2.0.min.js"></script>
-    <script src="../js/jquery-ui.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/jquery.slicknav.min.js"></script>
-    <script src="../js/owl.carousel.min.js"></script>
-    <script src="../js/magnific-popup.min.js"></script>
-    <script src="../js/counterup.js"></script>
-    <script src="../js/jquery.waypoints.min.js"></script>
-    <script src="../js/theme.js"></script>
-</body>
+					<a id="showMoreUI" class="uiMoreBtn">
+						<!-- Click to display the #ui-2 -->
+						<div class="col-xs-12 float-right ui-button more">
+							More <i class="fa fa-caret-down"> </i>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- ui area end -->
+		<!-- contributors area start -->
+		<footer>
+			<div class="footer-area">
+				<div class="container">
+					<!-- ScrollToTop Button -->
+					<!-- <a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"> -->
+					<!-- <span class="fa fa-chevron-up">Top</span> -->
+					<!-- </a> -->
+					<!-- ScrollToTop Button END-->
+					<p>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script>
+							document.write(new Date().getFullYear());
+						</script>
+						Helene UI. All rights reserved. Template by
+						<a href="https://colorlib.com" target="_blank" rel="noreferrer noopener">Colorlib</a>. With ❤ by
+						<a href="https://eunit99.github.io/" target="_blank" rel="noopener noreferrer">Eunit99</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!-- footer area end -->
+		<!-- Scripts -->
+		<script src="../js/jquery-3.2.0.min.js"></script>
+		<script src="../js/jquery-ui.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/jquery.slicknav.min.js"></script>
+		<script src="../js/owl.carousel.min.js"></script>
+		<script src="../js/magnific-popup.min.js"></script>
+		<script src="../js/counterup.js"></script>
+		<script src="../js/jquery.waypoints.min.js"></script>
+		<script src="../js/theme.js"></script>
+	</body>
 
 </html>
