@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/095cf32d-4d90-4488-9ace-9b738e9e9643/deploy-status)](https://app.netlify.com/sites/helene-ui/deploys) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c0427743b0a491f9d3a1e6474354934)](https://app.codacy.com/manual/Eunit99/helene-ui?utm_source=github.com&utm_medium=referral&utm_content=Eunit99/helene-ui&utm_campaign=Badge_Grade_Dashboard)
+[![Made in Nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=flat-square)](https://github.com/acekyd/made-in-nigeria) [![Netlify Status](https://api.netlify.com/api/v1/badges/095cf32d-4d90-4488-9ace-9b738e9e9643/deploy-status)](https://app.netlify.com/sites/helene-ui/deploys) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c0427743b0a491f9d3a1e6474354934)](https://app.codacy.com/manual/Eunit99/helene-ui?utm_source=github.com&utm_medium=referral&utm_content=Eunit99/helene-ui&utm_campaign=Badge_Grade_Dashboard)
 # **Helene UI - Minimal Conversational User Interfaces** 
 <img src="img/icon/helene.png" alt="Helene icon" />
 
