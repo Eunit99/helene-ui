@@ -1,14 +1,17 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/095cf32d-4d90-4488-9ace-9b738e9e9643/deploy-status)](https://app.netlify.com/sites/helene-ui/deploys) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c0427743b0a491f9d3a1e6474354934)](https://app.codacy.com/manual/Eunit99/helene-ui?utm_source=github.com&utm_medium=referral&utm_content=Eunit99/helene-ui&utm_campaign=Badge_Grade_Dashboard)
-# **Helene UI - Minimal Conversational User Interfaces** 
-<img src="img/icon/helene.png" alt="Helene icon" />
+#
 
+[![Made in Nigeria](https://img.shields.io/badge/made%20in-nigeria-008751.svg?style=flat-square)](https://github.com/acekyd/made-in-nigeria) [![Netlify Status](https://api.netlify.com/api/v1/badges/095cf32d-4d90-4488-9ace-9b738e9e9643/deploy-status)](https://app.netlify.com/sites/helene-ui/deploys) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c0427743b0a491f9d3a1e6474354934)](https://app.codacy.com/manual/Eunit99/helene-ui?utm_source=github.com&utm_medium=referral&utm_content=Eunit99/helene-ui&utm_campaign=Badge_Grade_Dashboard)
 
-### Helene UIs (User Interfaces) are minimal conversational user interfaces.
+## Helene UI - Minimal Conversational User Interfaces
+
+                 <img src="img/icon/helene.png" alt="Helene icon" />
+
+### Helene UIs (User Interfaces) are minimal conversational user interfaces
 
 #### Features of ``Helene UIs`` include:
 
 1. ``Highly responsive``; beautiful across all devices,
-2. ``Easily integratable`` into any existing project,
+2. ``Easily integrable`` into any existing project,
 3. ``Customizable`` to your desired design.
 
 #### Available conversational User Interfaces
@@ -17,7 +20,7 @@
 2. ``Chat window``
 3. ``Embeddable chat UI``
 4. ``Overlay chat UI``
-5. More 
+5. More
 
 #### Files in each User Interface
 
@@ -42,5 +45,7 @@ To use any conversational UI of your choice, just download the compressed file, 
 #### How to contribute
 
 To contribute to the project, kindly read our [guide on how to contribute](https://github.com/Eunit99/Helene-UI/blob/master/CONTRIBUTING.md).
+
 #### License
+
 Helene UI is licenced under the [MIT License](https://github.com/Eunit99/Helene-UI/blob/master/LICENSE).
