@@ -4,7 +4,7 @@
 
 ## Helene UI - Minimal Conversational User Interfaces
 
-                 <img src="img/icon/helene.png" alt="Helene icon" />
+<img src="img/icon/helene.png" alt="Helene icon" />
 
 ### Helene UIs (User Interfaces) are minimal conversational user interfaces
 
